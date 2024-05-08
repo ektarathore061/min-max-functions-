@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+// Function to find the minimum element in a vector
+template<typename T>
+T findMin(const std::vector<T>& vec) {
+    return *std::min_element(vec.begin(), vec.end());
+}
+
+// Function to find the maximum element in a vector
+template<typename T>
+T findMax(const std::vector<T>& vec) {
+    return *std::max_element(vec.begin(), vec.end());
+}
+
+int main() {
+    std::vector<int> numbers = {3, 5, 1, 9, 4, 7, 2, 8, 6};
+
+    // Find the minimum element
+    int min = findMin(numbers);
+    std::cout << "Minimum element: " << min << std::endl;
+
+    // Find the maximum element
+    int max = findMax(numbers);
+    std::cout << "Maximum element: " << max << std::endl;
+
+    return 0;
+}
